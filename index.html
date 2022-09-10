@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Styles Generator</title>
+</head>
+
+<body class="dark-theme">
+  <header class="relative">
+    <h1>CSS Element Generator</h1>
+
+  </header>
+  <main>
+    <!--SECTION OPTIONS -->
+    <section class="options" onselectstart="return false">
+      <h2>CSS Box-Shadow Options</h2>
+      <div class="scroll">
+        <div class="optSimple">
+          <label for="offset-x" class="cursor-default d-flex">Offset-x
+            <input type="number" min="-100" max="100" name="offsetX" id="offset-x" target="0" value="0">
+          </label>
+          <input type="range" target="0" step="1" min="-100" max="100" name="offsetX" value="0">
+          <label for="offset-y" class="cursor-default d-flex">Offset-y
+            <input type="number" min="-100" max="100" name="offsetY" id="offset-y" target="1" value="0">
+          </label>
+          <input type="range" target="1" step="1" min="-100" max="100" name="offsetY" value="0">
+          <label for="blur" class="cursor-default d-flex">Blur
+            <input type="number" target="2" min="-100" max="100" name="blur" id="blur" value="10">
+          </label>
+          <input type="range" target="2" step="1" min="0" max="100" name="blur" value="10">
+          <label for="spread" class="cursor-default d-flex">Spread
+            <input type="number" target="3" min="-100" max="100" name="spread" id="spread" value="8">
+          </label>
+          <input type="range" target="3" step="1" min="-100" max="100" name="spread" value="8">
+          <label for="color" class="d-flex">Color
+            <input type="color" name="color" id="color" value='#000000'>
+          </label>
+          <div>
+            <label for="inset" class="d-flex">Inset
+              <input type="checkbox" name="inset" id="inset" value="inset">
+            </label>
+          </div>
+        </div>
+        <div class="relative">
+          <label for="db-box-shadow"><strong> <i>Double Box-Shadow?</i></strong></label>
+          <input type="checkbox" name="dbBoxShadow" id="db-box-shadow" class="absolute">
+          <!-- ACTIVE ONLY CHECKBOX DOUBLE BOX-SHADOW TRUE -->
+          <div class="db-box optDouble">
+            <label for="offset-x-db" class="cursor-default d-flex">Offset-x
+              <input type="number" target="4" min="-100" max="100" name="offsetX2" id="offset-x-db" value="0">
+            </label>
+            <input type="range" target="4" min="-100" max="100" step="1" name="offsetX2" value="0">
+            <label for="offset-y-db" class="cursor-default d-flex">Offset-y
+              <input type="number" target="5" min="-100" max="100" name="offsetY2" id="offset-y-db" value="0">
+            </label>
+            <input type="range" target="5" step="1" min="-100" max="100" name="offsetY2" value="0">
+            <label for="blur-db" class="cursor-default d-flex">Blur
+              <input type="number" target="6" min="0" max="100" name="blur2" id="blur-db" value="8">
+            </label>
+            <input type="range" target="6" step="1" min="0" max="100" name="blur2" value="8">
+            <label for="spread-db" class="cursor-default d-flex">Spread
+              <input type="number" target="7" min="-100" max="100" name="spread2" id="spread-db" value="6">
+            </label>
+            <input type="range" target="7" step="1" min="-100" max="100" name="spread2" value="6">
+
+            <label for="color-db" class="d-flex">Color
+              <input type="color" name="color2" id="color-db" value="#ff0000">
+            </label>
+
+            <div>
+              <label for="inset2" class="d-flex">Inset
+                <input type="checkbox" name="inset2" id="inset2" checked value="inset">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PREVIEW AREA - RENDER BOX-SHADOW -->
+    <section class="area-render-box">
+      <div class="square"></div>
+      <!-- RENDER CSS TEXT TO CLIP -->
+      <div class="area-copy-css">
+        <a role="button" class="btn-copy" href="#" aria-label="Copy To Clipboard">
+          <img src="./assets/svg/copy-add-24-filled.svg" alt="copiar">
+        </a>
+        <p class="cssText"></p>
+      </div>
+    </section>
+
+    <section class="opt-square" onselectstart="return false">
+      <h2>Square Options</h2>
+      <div class="scroll">
+        <label for="Width" class="cursor-default d-flex">Width
+          <input type="number" min="0" max="250" id="Width" name="width" target="8" value="200">
+        </label>
+        <input type="range" min="0" max="250" name="width" target="8" value="200">
+
+        <label for="Height" class="cursor-default d-flex">Height
+          <input type="number" min="0" max="250" name="height" id="Height" target="9" value="200">
+        </label>
+        <input type="range" min="0" max="250" target="9" name="height" value="200">
+
+        <label for="radius" class="cursor-default d-flex">Border-Radius
+          <input type="number" target="10" min="0" max="50" name="borderRadius" id="radius" value="0">
+        </label>
+        <input type="range" target="10" step="1" min="0" max="50" name="borderRadius" value="0">
+
+        <label for="bg-color" class="d-flex">Background Color
+          <input type="color" id="bg-color" name="backgroundColor" value="#f9f9f9">
+        </label>
+
+        <div class="relative">
+          <label for="border">Border</label>
+          <input type="checkbox" name="borderNone" id="border" value="none" class="absolute">
+          <div class="border-opt">
+            <div class="d-flex column">
+              <div>
+                <label for="border-width" class="cursor-default d-flex">Border Width
+                  <input type="number" target="11" min="0" max="100" name="borderWidth" id="border-width" value="2">
+                </label>
+                <input type="range" target="11" step="1" min="0" max="100" name="borderWidth" value="2">
+
+              </div>
+              <div class="d-flex column">
+                <label for="border-type" class="d-flex">Type
+                  <select name="borderType" id="border-type">
+                    <option value="solid" selected>Solid</option>
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="outset">Outset</option>
+                    <option value="double">Double</option>
+                  </select>
+                </label>
+                <label for="border-color" class="d-flex">Border Color
+                  <input type="color" name="borderColor" id="border-color" value="#ff0000">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+  <!-- BUTTON DARK OR LIGHT MODE -->
+  <div class="btn">
+    <input type="checkbox" class="checkbox" onclick="switchTheme()" id="checkbox">
+    <label for="checkbox" class="label">
+      <img src="./assets/svg/round-light-mode.svg" class="sun" alt="sun light theme">
+      <img src="./assets/svg/round-dark-mode.svg" class="moon" alt="moon dark theme">
+      <div class='ball'></div>
+    </label>
+  </div>
+
+
+  <footer>
+    <div class="d-flex">
+      <p>Developed by<strong> Leonardo de Sant Ana © 2022 - All Rights Reserved</strong></p>
+      <div class="links">
+        <a href="https://github.com/LSantanaa">
+          <img src="./assets/svg/github-fill.svg" alt="icon-github">Github
+        </a>
+        <a href="https://www.linkedin.com/in/leonardo-de-santana-8b105a213/">
+          <img src="./assets/svg/linkedin-box-fill.svg" alt="icon-linkedin">LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./assets/js/app.js"></script>
+
+  <script>
+    //trocar tema
+    function switchTheme() {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+    }
+
+  </script>
+</body>
+
+</html>
