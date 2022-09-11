@@ -146,17 +146,7 @@ function dbShadow() {
                        background-color: ${squareProperties.backgroundColor};
                        border-radius: ${squareProperties.borderRadius};                                
                       `;
-  let border = '';
-  if (checkBorder.checked) {
-    border = `border: ${squareProperties.borderWidth} ${squareProperties.borderType} ${squareProperties.borderColor};`;
-  } else {
-    border = squareProperties.border;
-  }
-  square.style = cssText + styleSquare + border;
-  copyCss.innerHTML = `${cssText}<br>
-                       -webkit-${cssText}<br>
-                       -moz-${cssText}<br>
-                       ${styleSquare}`;
+  textCss(cssText, styleSquare);
 }
 function simpleShadow() {
   const cssText = `box-shadow: ${shadowProperties.inset} ${shadowProperties.offsetX} ${shadowProperties.offsetY} ${shadowProperties.blur} ${shadowProperties.spread} ${shadowProperties.color};`;
@@ -165,6 +155,11 @@ function simpleShadow() {
                        background-color: ${squareProperties.backgroundColor};
                        border-radius: ${squareProperties.borderRadius};                              
                       `;
+  textCss(cssText, styleSquare);
+}
+
+//função que transcreve o código css para área de copiar
+function textCss(cssText, styleSquare) {
   let border = '';
   if (checkBorder.checked) {
     border = `border: ${squareProperties.borderWidth} ${squareProperties.borderType} ${squareProperties.borderColor};`;
@@ -173,10 +168,10 @@ function simpleShadow() {
   }
   square.style = cssText + styleSquare + border;
   copyCss.innerHTML = `${cssText}<br>
-                        -webkit-${cssText}<br>
-                        -moz-${cssText}<br>
-                        ${styleSquare.replace(/;/g, '; <br>')}
-                        ${border}`;
+                      -webkit-${cssText}<br>
+                      -moz-${cssText}<br>
+                      ${styleSquare.replace(/;/g, '; <br>')}
+                      ${border}`;
 }
 
 //função de copiar o texto css
