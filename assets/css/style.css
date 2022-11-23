@@ -41,8 +41,8 @@ body {
 
 main {
   display: flex;
-  justify-content: space-between;
   padding: 20px;
+  margin: 30px 0;
   width: 100%;
   height: auto;
   justify-content: center;
@@ -231,6 +231,12 @@ section.area-render-box .square {
   display: block;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 footer div.d-flex {
   width: 100%;
   padding: 10px;
@@ -307,6 +313,17 @@ footer div.d-flex .links a img {
   color: yellow;
 }
 
+@media (min-height: 820px) {
+  main {
+    height: 800px;
+  }
+  section {
+    height: 745px;
+  }
+  div.scroll {
+    max-height: 600px;
+  }
+}
 @media (max-width: 870px) {
   main {
     flex-wrap: wrap;
@@ -353,7 +370,7 @@ section.opt-square h2 {
   }
   .btn {
     right: 5px;
-    top: 20px;
+    top: -20px;
   }
   .label {
     transform: none;

@@ -38,8 +38,8 @@ body {
 }
 main {
   display: flex;
-  justify-content: space-between;
   padding: 20px;
+  margin: 30px 0;
   width: 100%;
   height: auto;
   justify-content: center;
@@ -219,6 +219,11 @@ section.area-render-box {
 }
 
 //Footer
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 footer div.d-flex {
   width: 100%;
   padding: 10px;
@@ -295,6 +300,18 @@ footer div.d-flex {
 .sun {
   color: yellow;
 }
+//telas maiores
+@media (min-height: 820px ){
+  main{
+    height: 800px;
+  }
+  section{
+    height: 745px;
+  }
+  div.scroll{
+    max-height: 600px;
+  }
+}
 
 // Mobile
 @media (max-width: 870px) {
@@ -342,7 +359,7 @@ footer div.d-flex {
   //btn-dark-light-mode
   .btn {
     right: 5px;
-    top: 20px;
+    top: -20px;
   }
   .label {
     transform: none;
